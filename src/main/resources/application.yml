@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    default: dev
+  application:
+    name: demo-services
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test
+    username: postgres
+    password: postgres
+    initialization-mode: always
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+server:
+  port: 9090
+
+
+debug: true
+trace: false
